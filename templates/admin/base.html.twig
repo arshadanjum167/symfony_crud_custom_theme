@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        <h4>Admin Dashboard</h4>
+        <a href="{{ path('product_index') }}">Product List</a>
+        <a href="{{ path('app_logout') }}">Logout</a>
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

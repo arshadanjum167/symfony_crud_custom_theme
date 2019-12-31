@@ -1,0 +1,64 @@
+{% extends 'layout/base.html.twig' %}
+
+{% block title %}Product index{% endblock %}
+
+{% block body %}
+
+<div class="content">
+{% include 'admin/product/_header.html.twig' %}
+<section class="page-content container-fluid">
+<div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                        <table class="table" id="example1">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Title</th>
+                                    <th>Price</th>
+                                    <th class="text-center">actions</th>
+                                    {#<th>actions</th>#}
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {% for product in products %}
+                                <tr>
+                                    <td>{{ product.id }}</td>
+                                    <td>{{ product.title }}</td>
+                                    <td>{{ product.price }}</td>
+                                    {#<td>
+                                        <a href="{{ path('product_show', {'id': product.id}) }}">show</a>
+                                        <a href="{{ path('product_edit', {'id': product.id}) }}">edit</a>
+                                    </td>#}
+                                    <td class="table-field-actions text-center">
+                                            <div class="btn-group">
+                                                <a href="#" data-toggle="dropdown" class="btn btn-default btn-sm btn-icon-only transparent" title="">
+                                                    <i class="icon dripicons-dots-3 zmdi-hc-fw"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-icon-menu dropdown-menu-right">
+                                                    <a class="dropdown-item" href="{{ path('product_show', {'id': product.id}) }}"><i class="zmdi zmdi-eye zmdi-hc-fw text-secondary"></i> View</a>
+                                                    <a class="dropdown-item" href="{{ path('product_edit', {'id': product.id}) }}"><i class="zmdi zmdi-edit zmdi-hc-fw text-secondary"></i> Edit</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                </tr>
+                            {% else %}
+                                <tr>
+                                    <td colspan="4">no records found</td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+</div>
+
+    
+{% endblock %}

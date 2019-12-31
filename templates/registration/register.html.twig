@@ -1,0 +1,24 @@
+{% extends 'layout/login.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+{{ form_start(registrationForm) }}
+    <div class="login-box">
+        <div class="login-logo">
+            {#<img src="{{ asset('assets/img/logo-white.png') }}" alt="Logo"/>#}
+            <h2>Admin Panel</h2>
+        </div>
+        <div class="login-box-body text-center">
+            <h2 class="mb-3">Registration</h2>
+            <p class="mb-4">Enter your below details for registration</p>
+            {{ form_row(registrationForm.email, {'attr': {'class': 'form-control'}} ) }}
+            {{ form_row(registrationForm.plainPassword,{'attr': {'class': 'form-control'}} ) }}
+            {{ form_row(registrationForm.agreeTerms) }}
+
+            <button class="btn btn-primary btn-block btn-lg">Register</button>
+            <a href="{{ path('app_login') }}">Sign In</a>
+        </div>
+    <div>
+    {{ form_end(registrationForm) }}
+{% endblock %}

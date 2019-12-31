@@ -1,0 +1,26 @@
+
+<aside class="sidebar sidebar-left"> 
+    <div class="sidebar-content">
+        <div class="aside-toolbar">
+            <ul class="site-logo">
+                <li>
+                    <!-- START LOGO -->
+                    <a href="{{path('admin_default')}}">
+                        <div class="logo">
+                            {#<img src="{{asset('assets/img/logo.png')}}"/>#}
+                            <sup class="text-white ml-2 text-uppercase">Admin</sup>
+                        </div>
+                        <!--<span class="brand-text ml-1">Sajaji - Admin</span>-->
+                    </a>
+                    <!-- END LOGO -->
+                </li>
+            </ul>
+        </div>
+        <nav class="main-menu">
+            <ul class="nav metismenu">
+                <li class=""><a href="{{path('admin_default')}}"><i class="icon dripicons-meter"></i><span>Dashboard</span></a></li>
+                <li class=""><a href="{{path('product_index')}}"><i class="la la-tags"></i><span>Product</span></a></li>
+            </ul>
+        </nav>
+    </div>
+</aside>

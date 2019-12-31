@@ -1,0 +1,69 @@
+/* hide the tabs and panes to prevent flash of tabs on page
+ * load/refresh before plugin has time to wrap them in the 
+ * scroller; .nav-tabs are automatically unhidden by the 
+ * plugin when they're ready, and .tab-content is unhidden 
+ * in st-demo.js when the 'ready.scrtabs' event fires */
+.nav-tabs-slider.nav-tabs,
+.nav-tabs-slider ~ .tab-content {
+  display: none;
+}
+
+.st-demo-header {
+  background-color: #666666;
+  color: white;
+  font-size: 24px;
+  padding: 8px 24px;
+}
+
+.st-demo-header button {
+  color: black;
+  font-size: 12px;
+}
+
+.st-demo-subheader {
+  background-color: #f0f0f0;
+  color: #333;
+  font-size: 16px;
+  height: 65px;
+  margin-top: 50px;
+  padding: 8px 24px;
+}
+
+.st-demo-subheader:first-child {
+  margin-top: 0;
+}
+
+.custom-arrow {
+  z-index: 2;
+  /*border: 1px solid #ddd;*/
+  /*border-top: none;*/
+  background-color: #3668f1;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  position: absolute;
+  font-size: 22px;
+  height: 50px;
+  margin-bottom: -1px;
+  padding: 9px 6px;
+  width: 40px;
+  border-radius: 3px;
+  top: 0;
+}
+.custom-arrow-left{
+  border-radius: 3px 0px 0px 3px;
+  left: 0;
+}
+.custom-arrow-right{
+  border-radius: 0px 3px 3px 0px;
+  right: 0;
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}

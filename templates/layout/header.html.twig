@@ -1,0 +1,59 @@
+
+<!-- TOP TOOLBAR WRAPPER -->
+<nav class="top-toolbar navbar navbar-mobile navbar-tablet">
+    <ul class="navbar-nav nav-left">
+        <li class="nav-item">
+            <a href="javascript:void(0)" data-toggle-state="aside-left-open">
+            <i class="icon dripicons-align-left"></i>
+            </a>
+        </li>
+    </ul>
+    <ul class="navbar-nav nav-center site-logo">
+        <li>
+            <a href="{{path('admin_default')}}">
+                <div class="logo_mobile">
+                    {#<img src="{{asset('assets/img/logo.png')}}"/>#}
+                    <sup class="text-white ml-2 text-uppercase">Admin</sup>
+                </div>
+                <!--<span class="brand-text">Workernet</span>-->
+            </a>
+        </li>
+    </ul>
+    <ul class="navbar-nav nav-right">
+        <li class="nav-item">
+            <a href="javascript:void(0)" data-toggle-state="mobile-topbar-toggle">
+            <i class="icon dripicons-dots-3 rotate-90"></i>
+            </a>
+        </li>
+    </ul>
+</nav>
+<nav class="top-toolbar navbar navbar-desktop flex-nowrap">
+    <ul class="navbar-nav nav-right">
+        
+            
+        
+        <li class="nav-item dropdown mr-3">
+            <a  class="nav-link nav-pill user-avatar" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            {#<img src="" class="w-35 h-35 rounded-circle" alt="Profile Image" height="35px">#}
+            <i style="color:#7598c1 !important" class="la la-navicon"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right dropdown-menu-accout">
+                <div class="dropdown-header pb-3">
+                    <div class="media d-user">
+                        {#<img class="align-self-center mr-3 w-40 h-40 rounded-circle" src="" alt="Profile Image">#}
+                        <div class="media-body">
+                            <h5 class="mt-0 mb-0">Admin</h5>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                {#<a class="dropdown-item" href="{{ url('/admin/default/myprofile') }}"><i class="icon dripicons-user"></i> My Profile</a>#}
+                {#<a class="dropdown-item" href="{{ route('admin.showChangePassowrd') }}"><i class="icon dripicons-gear"></i> Change Password</a>#}
+                {#<!--<a class="dropdown-item" href="../../pages/profile/change-admin-code.php"><i class="icon dripicons-gear"></i> Change Admin Code</a>#}
+                <a class="dropdown-item" href="{{ path('app_logout') }}"><i class="icon dripicons-lock"></i> Logout</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+<!-- END TOP TOOLBAR WRAPPER -->
+

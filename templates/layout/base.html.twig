@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+        {% include 'layout/css.html.twig' %}
+        {% endblock %}
+    </head>
+    <body>
+
+        <div id="app">
+            {% block sidebar %}
+            {% include 'layout/sidebar.html.twig' %}
+            <div class="content-wrapper">
+                {% block header %}
+                    {% include 'layout/header.html.twig' %}
+                {% endblock %}    
+                {% block body %}{% endblock %}
+            </div>
+            {% endblock %}
+        </div>
+
+        
+        {% block javascripts %}
+        {% include 'layout/scripts.html.twig' %}
+        {% endblock %}
+    </body>
+</html>
